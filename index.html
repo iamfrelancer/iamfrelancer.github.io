@@ -24,11 +24,11 @@
         </nav>
         <header class="header uk-inline uk-text-center" id="header">
             <div class="header_text">
-                <h1 class="header_title uk-text-uppercase">
+                <h1 class="header_title uk-text-uppercase" uk-scrollspy="cls:uk-animation-fade">
                     <span class="underline" onmouseover="alert_info.classList.toggle('uk-hidden')" onmouseout="alert_info.classList.toggle('uk-hidden')">ми</span> створюємо <span class="heder_keyword underline" onmouseover="slider.classList.toggle('uk-hidden')" onmouseout="slider.classList.toggle('uk-hidden')">сайти</span>
                 </h1>
                 
-                <h4 class="header_subtitle">Які розповідають про вас</h4>
+                <h4 class="header_subtitle" uk-scrollspy="cls:uk-animation-fade; delay: 500;">Які розповідають про вас</h4>
             </div>
             <div id="slider" class="slider uk-cover-container uk-hidden">
                 <img class="slider_item" src="img/slider_item/project01.jpg" alt="project">
@@ -38,7 +38,7 @@
             <div id="alert_info" class="uk-hidden">
                 Ми - студія з веб-дизайну та розробки, що створює лендінги (односторінкові веб-сайти), які стимулюють трафік, залучення та конверсію для вашого бізнесу
             </div>
-            <div>
+            <div uk-scrollspy="cls:uk-animation-slide-bottom;">
                 <a href="#form" class="link_button" uk-scroll>
                     Створити сайт
                 </a>
@@ -49,7 +49,7 @@
     <hr>
     <main class="main portfolio">
         <div class="wraper">
-            <div class="portfolio_wraper portfolio_carts carts-firsr">
+            <div class="portfolio_wraper portfolio_carts carts-firsr" uk-scrollspy="target: > div; cls: uk-animation-fade; repeat: true;">
 
                 <div class="portfolio_cart border_r portfolio_cart-hover">
                     <div class="cart_img">
@@ -118,10 +118,10 @@
         <hr>
         <div class="wraper ">
             <div class="wraper_project">
-                <img class="project_img img_first" src="/img/slider_item/project01.jpg" alt="">
+                <img uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay: 400;" class="project_img img_first" src="/img/slider_item/project01.jpg" alt="project01">
             </div>
             <div class="wraper_project">
-                <img class="project_img img_second" src="/img/slider_item/project05.jpg" alt="">
+                <img uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay: 400;" class="project_img img_second" src="/img/slider_item/project05.jpg" alt="project05">
             </div>
 
             <div class="portfolio_wraper portfolio_carts">
@@ -138,26 +138,28 @@
                     
                 </div>
                 <div class="uk-width-2-3 border_r">
-                    <h1 class="step_headline">Як почати?</h1>
+                    <h1 class="step_headline" uk-scrollspy="cls: uk-animation-fade; delay: 500; repeat: true;">Як почати?</h1>
                 </div>
             </div>
 
             <div class="steps portfolio_wraper uk-flex">
                 <div class="uk-width-1-3 border_r step_numb">
-                    <span>1</span>
+                    <span uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay: 400;">1</span>
                 </div>
-                <div class="steps_content uk-width-2-3 border_r">
-                    <h2>Стратегія</h2>
-                    <p>Все, що ми робимо, починається зі стратегії. Ми заглиблюємось у вашу сферу, дізнаємось про всі її тонкощі. Потім ми підбираємо унікальну стратегію, тактику та технології, які допоможуть досягти ваших цілей.</p>
+                <div class="steps_content uk-width-2-3 border_r" uk-scrollspy="target: > .animation; cls: uk-animation-slide-right; repeat: true; delay: 400;">
+                    <h2 class="animation">Стратегія</h2>
+                    <p class="animation">Все, що ми робимо, починається зі стратегії. Ми заглиблюємось у вашу сферу, дізнаємось про всі її тонкощі. Потім ми підбираємо унікальну стратегію, тактику та технології, які допоможуть досягти ваших цілей.</p>
                 </div>
             </div>
             <div class="steps portfolio_wraper uk-flex">
                 <div class="uk-width-1-3 border_r step_numb">
-                    <span>2</span>
+                    <span uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay: 400;">2</span>
                 </div>
-                <div class="steps_content uk-width-2-3 border_r" style="position: relative;">
-                    <h2>Дизайн</h2>
-                    <p>Наші дизайнери запропонують сучасні рішення дизайну інтерфейсу, враховуючи ваші побажання та <span class="underline" onmouseover="alert_info2.classList.toggle('uk-hidden')" onmouseout="alert_info2.classList.toggle('uk-hidden')">фірмовий стиль</span>.</p>
+                <div class="steps_content uk-width-2-3 border_r" 
+                    style="position: relative;" 
+                    uk-scrollspy="target: > .animation; cls: uk-animation-slide-right; repeat: true; delay: 400;">
+                    <h2 class="animation">Дизайн</h2>
+                    <p class="animation">Наші дизайнери запропонують сучасні рішення дизайну інтерфейсу, враховуючи ваші побажання та <span class="underline" onmouseover="alert_info2.classList.toggle('uk-hidden')" onmouseout="alert_info2.classList.toggle('uk-hidden')">фірмовий стиль</span>.</p>
                     <div id="alert_info2" class="uk-hidden">
                         Якщо у вас ще немає корпоративного стилю (лого, фірмових кольорів), то ми з радістю допоможемо його створити
                     </div>
@@ -165,26 +167,38 @@
             </div>
             <div class="steps portfolio_wraper uk-flex">
                 <div class="uk-width-1-3 border_r step_numb">
-                    <span>3</span>
+                    <span uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay: 400;">3</span>
                 </div>
-                <div class="steps_content uk-width-2-3 border_r">
-                    <h2>Розробка</h2>
-                    <p>На цьому кроці ваш сайт “оживе”. Розробники спроєктують модель сайту, готову для використання.</p>
+                <div class="steps_content uk-width-2-3 border_r"
+                    uk-scrollspy="target: > .animation; cls: uk-animation-slide-right; repeat: true; delay: 400;">
+                    <h2 class="animation">Розробка</h2>
+                    <p class="animation">На цьому кроці ваш сайт “оживе”. Розробники спроєктують модель сайту, готову для використання.</p>
                 </div>
             </div>
         </div>
         <hr>
         <div class="wraper">
-            <div class="motivation uk-text-uppercase">
-                <span class="uk-text-italic">Не має значення:</span>ви тільки <span class="heder_keyword">починаєте</span> або <span class="heder_keyword">розвиваєте</span> свій бренд, ми допоможемо <span class="primary_color">заявити про себе.</span>
-                <div class="wraper_button">
+            <div class="motivation uk-text-uppercase"
+                uk-scrollspy="target: > span; cls: uk-animation-fade; delay: 400;">
+                <span class="uk-text-italic">Не має значення:</span>
+                <span>ви тільки</span>
+                <span class="heder_keyword"></span>
+                <span>починаєте</span>
+                <span>або</span>
+                <span class="heder_keyword">розвиваєте</span>
+                <span>свій бренд,</span>
+                <span>ми допоможемо</span>
+                <span class="primary_color">заявити про себе.</span>
+                <div class="wraper_button" uk-scrollspy="cls:uk-animation-slide-bottom;">
+                    <!-- help -->
                     <a href="#form" class="link_button" uk-scroll>
                         Створити сайт
                     </a>
                 </div>
             </div>
             
-            <form class="form" id="form" action="">
+            <form class="form" id="form" action=""
+                uk-scrollspy="cls: uk-animation-fade; delay: 600;">
                 <h2 class="form_headline">Розкажи нам про свій проєкт </h2>
                 <label for="name" class="form-label">Мене звати <input type="text" name="name" id="name" placeholder="Ім'я"></label>
                 <label for="work" class="form-label">я займаюсь <input type="text" name="work" id="work" placeholder="Вид діяльності"></label>
@@ -196,11 +210,13 @@
 
             <footer id="footer">
                 <div class="footer_info">
-                    <div class="info_text">
+                    <div class="info_text" 
+                        uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
                         Не соромся,<br>
                         <span class="uk-text-italic super-bold">напиши нам</span>
                     </div>
-                    <div class="info_contact">
+                    <div class="info_contact"
+                        uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
                         mur.designstudio@gmail.com<br>
                         0999876576
                     </div>
