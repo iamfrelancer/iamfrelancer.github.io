@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One:wght@600;700;800&display=swap');
 p{
     font-family: 'Open Sans', sans-serif;
+
     font-size: 18px;
 }
 h1{
@@ -34,7 +37,9 @@ h5{
     text-decoration: underline;
 }
 body{
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Russo One', sans-serif;
+
     /* background-color: #333; */
     color: #1c1c1c;
 }
@@ -84,6 +89,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 .header_text{
     z-index: 1;
@@ -168,10 +174,21 @@ li a.language-active{
     left: 10%;
 }
 #alert_info2{
-    position: relative;
-    left: 30%;
-    top: -80%;
+    position: absolute;
+    /* left: 30%;
+    top: -80%; */
+    left: 40%;
+    top: -10%;
+    /* help */
+    width: 400px;
 }
+
+@media screen and (min-width: 700px){
+    #alert_info2{
+        /* width: 500px; */
+    }
+}
+
 .portfolio_wraper{
     border-left: 2px solid #000;
     /* border-right: 2px solid #000; */
@@ -295,6 +312,7 @@ input[type=text]{
     text-align: center;
     background: none;
     font-family: 'Inter', sans-serif;
+    
     font-size: 26px;
     margin: 0 16px;
 }
@@ -327,7 +345,7 @@ input[type=text]{
 }
 
 .footer_info{
-    margin: 200px 240px;
+    margin: 200px 240px 200px 240px;
     display: flex;
     justify-content: space-between
 }
@@ -341,15 +359,25 @@ input[type=text]{
     font-size: 36px;
     text-align: right;
 }
+.footer_imgs{
+    position: relative;
+}
 .logo3d{
     width: 100%;
+}
+.bar_code{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 5%;
+    /* top: -8rem; */
+    /* z-index: 999; */
 }
 .border_r{
     border-right: 2px solid #000;
 }
 @media screen and (max-width: 1400px){
-    #alert_info,
-    #alert_info2{
+    #alert_info{
         width: 70%;
     }
     .footer_info{
@@ -363,6 +391,9 @@ input[type=text]{
         text-align: center;
         text-decoration: underline;
         margin-top: 40px;
+    }
+    .form{
+        background: url(/img/bg-form-mobi.jpg);
     }
 }
 @media screen and (max-width: 1200px){
@@ -406,6 +437,7 @@ input[type=text]{
     .footer_info{
         margin: 50px 60px;
     }
+    
 }
 @media screen and (max-width: 640px){
     nav{
@@ -449,6 +481,9 @@ input[type=text]{
     #alert_info2{
         font-size: 3vw;
         padding: 3vw;
+    }
+    #alert_info2{
+        width: auto;
     }
     /* size */
     h1{
